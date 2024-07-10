@@ -26,7 +26,7 @@ TAG = latest
 # Makefile.docker overwrites
 NAME       = pylint
 VERSION    = latest
-IMAGE      = cytopia/pylint
+IMAGE      = Magnati/pylint
 FLAVOUR    = latest
 DIR        = Dockerfiles
 

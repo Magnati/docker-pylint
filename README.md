@@ -1,12 +1,12 @@
 # Docker image for `pylint`
 
-[![Tag](https://img.shields.io/github/tag/cytopia/docker-pylint.svg)](https://github.com/cytopia/docker-pylint/releases)
-[![](https://img.shields.io/badge/github-cytopia%2Fdocker--pylint-red.svg)](https://github.com/cytopia/docker-pylint "github.com/cytopia/docker-pylint")
+[![Tag](https://img.shields.io/github/tag/Magnati/pylint.svg)](https://github.com/Magnati/pylint/releases)
+[![](https://img.shields.io/badge/github-Magnati%2Fdocker--pylint-red.svg)](https://github.com/Magnati/pylint "github.com/Magnati/pylint")
 [![License](https://img.shields.io/badge/license-MIT-%233DA639.svg)](https://opensource.org/licenses/MIT)
 
-[![lint](https://github.com/cytopia/docker-pylint/workflows/lint/badge.svg)](https://github.com/cytopia/docker-pylint/actions?query=workflow%3Alint)
-[![build](https://github.com/cytopia/docker-pylint/workflows/build/badge.svg)](https://github.com/cytopia/docker-pylint/actions?query=workflow%3Abuild)
-[![nightly](https://github.com/cytopia/docker-pylint/workflows/nightly/badge.svg)](https://github.com/cytopia/docker-pylint/actions?query=workflow%3Anightly)
+[![lint](https://github.com/Magnati/pylint/workflows/lint/badge.svg)](https://github.com/Magnati/pylint/actions?query=workflow%3Alint)
+[![build](https://github.com/Magnati/pylint/workflows/build/badge.svg)](https://github.com/Magnati/pylint/actions?query=workflow%3Abuild)
+[![nightly](https://github.com/Magnati/pylint/workflows/nightly/badge.svg)](https://github.com/Magnati/pylint/actions?query=workflow%3Anightly)
 
 
 > #### All [#awesome-ci](https://github.com/topics/awesome-ci) Docker images
@@ -39,7 +39,7 @@
 > [yamlfmt][yfmt-git-lnk] **•**
 > [yamllint][ylint-git-lnk]
 
-View **[Dockerfiles](https://github.com/cytopia/docker-pylint/blob/master/Dockerfiles/)** on GitHub.
+View **[Dockerfiles](https://github.com/Magnati/pylint/blob/master/Dockerfiles/)** on GitHub.
 
 
 **Available Architectures:**  `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x`
@@ -51,14 +51,14 @@ The image is built nightly against multiple stable versions and pushed to Docker
 
 ## :whale: Available Docker image versions
 
-[![](https://img.shields.io/docker/pulls/cytopia/pylint.svg)](https://hub.docker.com/r/cytopia/pylint)
-[![Docker](https://badgen.net/badge/icon/:latest?icon=docker&label=cytopia/pylint)](https://hub.docker.com/r/cytopia/pylint)
+[![](https://img.shields.io/docker/pulls/Magnati/pylint.svg)](https://hub.docker.com/r/Magnati/pylint)
+[![Docker](https://badgen.net/badge/icon/:latest?icon=docker&label=Magnati/pylint)](https://hub.docker.com/r/Magnati/pylint)
 
 #### Rolling releaess
 
 The following Docker image tags are rolling releases and are built and updated every night.
 
-[![nightly](https://github.com/cytopia/docker-pylint/workflows/nightly/badge.svg)](https://github.com/cytopia/docker-pylint/actions?query=workflow%3Anightly)
+[![nightly](https://github.com/Magnati/pylint/workflows/nightly/badge.svg)](https://github.com/Magnati/pylint/actions?query=workflow%3Anightly)
 
 | Docker Tag           | Git Ref   | pylint       | Available Architectures                      |
 |----------------------|-----------|--------------|----------------------------------------------|
@@ -69,7 +69,7 @@ The following Docker image tags are rolling releases and are built and updated e
 
 The following Docker image tags are built once and can be used for reproducible builds. Its version never changes so you will have to update tags in your pipelines from time to time in order to stay up-to-date.
 
-[![build](https://github.com/cytopia/docker-pylint/workflows/build/badge.svg)](https://github.com/cytopia/docker-pylint/actions?query=workflow%3Abuild)
+[![build](https://github.com/Magnati/pylint/workflows/build/badge.svg)](https://github.com/Magnati/pylint/actions?query=workflow%3Abuild)
 
 | Docker Tag           | Git Ref      | pylint       | Available Architectures                      |
 |----------------------|--------------|--------------|----------------------------------------------|
@@ -88,7 +88,7 @@ the root of your project where your `setup.cfg` or `tox.ini` config file is.
 ## :computer: Usage
 
 ```bash
-docker run --rm -v $(pwd):/data cytopia/pylint .
+docker run --rm -v $(pwd):/data Magnati/pylint .
 ```
 
 ## Related [#awesome-ci](https://github.com/topics/awesome-ci) projects
@@ -214,7 +214,7 @@ linter below for reproducible local or remote CI tests:
 [pyds-hub-img]: https://img.shields.io/docker/pulls/cytopia/pydocstyle.svg
 [pyds-hub-lnk]: https://hub.docker.com/r/cytopia/pydocstyle
 
-[pylint-git-lnk]: https://github.com/cytopia/docker-pylint
+[pylint-git-lnk]: https://github.com/Magnati/pylint
 [pylint-hub-img]: https://img.shields.io/docker/pulls/cytopia/pylint.svg
 [pylint-hub-lnk]: https://hub.docker.com/r/cytopia/pylint
 
@@ -250,4 +250,5 @@ The provided Makefiles will only require GNU Make and Docker itself removing the
 
 **[MIT License](LICENSE)**
 
+Copyright (c) 2024 [Magnati](https://github.com/Magnati)
 Copyright (c) 2019 [cytopia](https://github.com/cytopia)
