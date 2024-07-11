@@ -1,4 +1,4 @@
-FROM alpine:3.16 as builder
+FROM alpine:3.17 as builder
 
 RUN set -x \
 	&& apk add --no-cache \
@@ -25,7 +25,7 @@ RUN set -x \
 	&& find /usr/lib/ -name '*.pyc' -print0 | xargs -0 -n1 rm -rf
 
 
-FROM alpine:3.16 as production
+FROM alpine:3.17 as production
 ARG VERSION
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md
 #LABEL "org.opencontainers.image.created"=""
@@ -35,9 +35,9 @@ LABEL "maintainer"="Magnati <magnati@hotmail.de>"
 LABEL "org.opencontainers.image.authors"="Magnati <magnati@hotmail.de>"
 LABEL "org.opencontainers.image.vendor"="Magnati"
 LABEL "org.opencontainers.image.licenses"="MIT"
-LABEL "org.opencontainers.image.url"="https://github.com/Magnati/pylint"
-LABEL "org.opencontainers.image.documentation"="https://github.com/Magnati/pylint"
-LABEL "org.opencontainers.image.source"="https://github.com/Magnati/pylint"
+LABEL "org.opencontainers.image.url"="https://github.com/Magnati/docker-pylint"
+LABEL "org.opencontainers.image.documentation"="https://github.com/Magnati/docker-pylint"
+LABEL "org.opencontainers.image.source"="https://github.com/Magnati/docker-pylint"
 LABEL "org.opencontainers.image.ref.name"="pylint ${VERSION}"
 LABEL "org.opencontainers.image.title"="pylint ${VERSION}"
 LABEL "org.opencontainers.image.description"="pylint ${VERSION}"
