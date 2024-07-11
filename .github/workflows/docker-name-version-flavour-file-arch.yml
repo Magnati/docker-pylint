@@ -179,7 +179,7 @@ jobs:
         uses: cytopia/shell-command-retry-action@v0.1.6
         with:
           command: |
-            make test NAME=${{ matrix.name }} VERSION="${{ matrix.version }}" FLAVOUR=${{ matrix.flavour }} ARCH=${{ matrix.arch }} TAG=${{ steps.tag.outputs.docker-tag }}
+            make test NAME=${{ matrix.name }} VERSION="${{ matrix.version }}" FLAVOUR=${{ matrix.flavour }} FILE=${{ matrix.file }} ARCH=${{ matrix.arch }} TAG=${{ steps.tag.outputs.docker-tag }}
 
       # ------------------------------------------------------------
       # Deploy

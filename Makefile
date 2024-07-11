@@ -128,7 +128,7 @@ _test-version:
 			exit 1; \
 		fi; \
 	else \
-		echo "Testing for tag: $(VERSION)"; \
+		echo "Testing for tag: $(DOCKER_TAG)"; \
 		if ! docker run --rm --platform $(ARCH) $(IMAGE):$(DOCKER_TAG) --version | grep -E "^(pylint\s)?$(VERSION)"; then \
 			docker run --rm --platform $(ARCH) $(IMAGE):$(DOCKER_TAG) --version; \
 			echo "Failed"; \
