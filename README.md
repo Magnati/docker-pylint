@@ -6,7 +6,7 @@
 
 [![lint](https://github.com/Magnati/docker-pylint/workflows/lint/badge.svg)](https://github.com/Magnati/docker-pylint/actions?query=workflow%3Alint)
 [![build](https://github.com/Magnati/docker-pylint/workflows/build/badge.svg)](https://github.com/Magnati/docker-pylint/actions?query=workflow%3Abuild)
-[![nightly](https://github.com/Magnati/docker-pylint/workflows/nightly/badge.svg)](https://github.com/Magnati/docker-pylint/actions?query=workflow%3Anightly)
+[![weekly](https://github.com/Magnati/docker-pylint/workflows/weekly/badge.svg)](https://github.com/Magnati/docker-pylint/actions?query=workflow%3Aweekly)
 
 
 > #### All [#awesome-ci](https://github.com/topics/awesome-ci) Docker images
@@ -45,7 +45,7 @@ View **[Dockerfiles](https://github.com/Magnati/docker-pylint/blob/master/Docker
 **Available Architectures:**  `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x`
 
 Tiny Alpine-based multistage-build dockerized version of [pylint](https://github.com/PyCQA/pylint)<sup>[1]</sup>.
-The image is built nightly against multiple stable versions and pushed to Dockerhub.
+The image is built weekly against multiple stable versions and pushed to Dockerhub.
 
 <sup>[1] Official project: https://github.com/PyCQA/pylint</sup>
 
@@ -58,7 +58,7 @@ The image is built nightly against multiple stable versions and pushed to Docker
 
 The following Docker image tags are rolling releases and are built and updated every night.
 
-[![nightly](https://github.com/Magnati/docker-pylint/workflows/nightly/badge.svg)](https://github.com/Magnati/docker-pylint/actions?query=workflow%3Anightly)
+[![weekly](https://github.com/Magnati/docker-pylint/workflows/weekly/badge.svg)](https://github.com/Magnati/docker-pylint/actions?query=workflow%3Aweekly)
 
 | Docker Tag           | Git Ref   | pylint       | Available Architectures                      |
 |----------------------|-----------|--------------|----------------------------------------------|
