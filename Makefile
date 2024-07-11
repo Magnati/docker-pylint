@@ -26,7 +26,7 @@ TAG = latest
 # Makefile.docker overwrites
 NAME       = pylint
 VERSION    = latest
-IMAGE      = cytopia/pylint
+IMAGE      = magnati/pylint
 FLAVOUR    = latest
 DIR        = Dockerfiles
 
@@ -35,16 +35,16 @@ FILE = Dockerfile
 # Building from master branch: Tag == 'latest'
 ifeq ($(strip $(TAG)),latest)
 	ifeq ($(strip $(VERSION)),latest)
-		DOCKER_TAG = latest
+		DOCKER_TAG = latest-$(FILE)
 	else
-		DOCKER_TAG = $(VERSION)
+		DOCKER_TAG = $(VERSION)-$(FILE)
 	endif
 # Building from any other branch or tag: Tag == '<REF>'
 else
 	ifeq ($(strip $(VERSION)),latest)
-		DOCKER_TAG = latest-$(TAG)
+		DOCKER_TAG = latest-$(FILE)-$(TAG)
 	else
-		DOCKER_TAG = $(VERSION)-$(TAG)
+		DOCKER_TAG = $(VERSION)-$(FILE)-$(TAG)
 	endif
 endif
 
@@ -128,7 +128,7 @@ _test-version:
 			exit 1; \
 		fi; \
 	else \
-		echo "Testing for tag: $(VERSION)"; \
+		echo "Testing for tag: $(DOCKER_TAG)"; \
 		if ! docker run --rm --platform $(ARCH) $(IMAGE):$(DOCKER_TAG) --version | grep -E "^(pylint\s)?$(VERSION)"; then \
 			docker run --rm --platform $(ARCH) $(IMAGE):$(DOCKER_TAG) --version; \
 			echo "Failed"; \
