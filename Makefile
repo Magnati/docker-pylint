@@ -35,16 +35,16 @@ FILE = Dockerfile
 # Building from master branch: Tag == 'latest'
 ifeq ($(strip $(TAG)),latest)
 	ifeq ($(strip $(VERSION)),latest)
-		DOCKER_TAG = latest
+		DOCKER_TAG = latest-$(FILE)
 	else
-		DOCKER_TAG = $(VERSION)
+		DOCKER_TAG = $(VERSION)-$(FILE)
 	endif
 # Building from any other branch or tag: Tag == '<REF>'
 else
 	ifeq ($(strip $(VERSION)),latest)
-		DOCKER_TAG = latest-$(TAG)
+		DOCKER_TAG = latest-$(FILE)-$(TAG)
 	else
-		DOCKER_TAG = $(VERSION)-$(TAG)
+		DOCKER_TAG = $(VERSION)-$(FILE)-$(TAG)
 	endif
 endif
 
