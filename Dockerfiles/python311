@@ -14,20 +14,23 @@ RUN set -x \
 
 ARG VERSION
 RUN set -x \
+    && python3 -m venv /opt/venv \
+    && . /opt/venv/bin/activate \
 	&& if [ "${VERSION}" = "latest" ]; then \
 		pip3 install --no-cache-dir --no-compile pylint; \
 	else \
 		pip3 install --no-cache-dir --no-compile pylint~=${VERSION}.0; \
 	fi \
-	\
+  \
 	&& pylint --version \
 	\
-	&& find /usr/lib/ -name '__pycache__' -print0 | xargs -0 -n1 rm -rf \
-	&& find /usr/lib/ -name '*.pyc' -print0 | xargs -0 -n1 rm -rf
+	&& find /opt/venv/lib/ -name '__pycache__' -print0 | xargs -0 -n1 rm -rf \
+	&& find /opt/venv/lib/ -name '*.pyc' -print0 | xargs -0 -n1 rm -rf
 
 
 FROM alpine:3.19 as production
 ARG VERSION
+ARG FILE
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md
 #LABEL "org.opencontainers.image.created"=""
 #LABEL "org.opencontainers.image.version"=""
@@ -39,20 +42,16 @@ LABEL "org.opencontainers.image.licenses"="MIT"
 LABEL "org.opencontainers.image.url"="https://github.com/Magnati/docker-pylint"
 LABEL "org.opencontainers.image.documentation"="https://github.com/Magnati/docker-pylint"
 LABEL "org.opencontainers.image.source"="https://github.com/Magnati/docker-pylint"
-LABEL "org.opencontainers.image.ref.name"="pylint ${VERSION}"
-LABEL "org.opencontainers.image.title"="pylint ${VERSION}"
-LABEL "org.opencontainers.image.description"="pylint ${VERSION}"
+LABEL "org.opencontainers.image.ref.name"="pylint ${VERSION}-${FILE}"
+LABEL "org.opencontainers.image.title"="pylint ${VERSION}-${FILE}"
+LABEL "org.opencontainers.image.description"="pylint ${VERSION}-${FILE}"
 
 RUN set -x \
-	&& apk add --no-cache \
-		python3 \
-	&& ln -sf /usr/bin/python3 /usr/bin/python \
-	&& find /usr/lib/ -name '__pycache__' -print0 | xargs -0 -n1 rm -rf \
-	&& find /usr/lib/ -name '*.pyc' -print0 | xargs -0 -n1 rm -rf
+	&& apk add --no-cache python3
 
-COPY --from=builder /usr/lib/python3.11/site-packages/ /usr/lib/python3.11/site-packages/
-COPY --from=builder /usr/bin/pylint /usr/bin/pylint
+COPY --from=builder /opt/venv /opt/venv
 
 WORKDIR /data
+ENV PATH="/opt/venv/bin:$PATH"
 ENTRYPOINT ["pylint"]
 CMD ["--version"]
