@@ -41,8 +41,11 @@
 
 View **[Dockerfiles](https://github.com/Magnati/docker-pylint/blob/master/Dockerfiles/)** on GitHub.
 
+**Available Pylint major versions:** `2`, `3`
 
 **Available Architectures:**  `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x`
+
+**Supported Python versions:** `3.8`, `3.9`, `3.10`, `3.11`, `3.12`
 
 Tiny Alpine-based multistage-build dockerized version of [pylint](https://github.com/PyCQA/pylint)<sup>[1]</sup>.
 The image is built weekly against multiple stable versions and pushed to Dockerhub.
@@ -56,14 +59,22 @@ The image is built weekly against multiple stable versions and pushed to Dockerh
 
 #### Rolling releaess
 
-The following Docker image tags are rolling releases and are built and updated every night.
+The following Docker image tags are rolling releases and are built and updated every sunday night.
 
 [![weekly](https://github.com/Magnati/docker-pylint/workflows/weekly/badge.svg)](https://github.com/Magnati/docker-pylint/actions?query=workflow%3Aweekly)
 
-| Docker Tag           | Git Ref   | pylint       | Available Architectures                      |
-|----------------------|-----------|--------------|----------------------------------------------|
-| `latest`             | master    | latest       | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
-| `2`                  | master    | **`2.x.x`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| Docker Tag  | Git Ref   | pylint       | python | Available Architectures                                          |
+|-------------|-----------|--------------|--------|------------------------------------------------------------------|
+| `2-py38`    | master    | **`2.x.x`**  | `3.8`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `2-py39`    | master    | **`2.x.x`**  | `3.9`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `2-py310`   | master    | **`2.x.x`**  | `3.10` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `2-py311`   | master    | **`2.x.x`**  | `3.11` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `2-py312`   | master    | **`2.x.x`**  | `3.12` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `3-py38`    | master    | **`3.x.x`**  | `3.8`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` | 
+| `3-py39`    | master    | **`3.x.x`**  | `3.9`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `3-py310`   | master    | **`3.x.x`**  | `3.10` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `3-py311`   | master    | **`3.x.x`**  | `3.11` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `3-py312`   | master    | **`3.x.x`**  | `3.12` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 
 #### Point in time releases
 
@@ -71,10 +82,19 @@ The following Docker image tags are built once and can be used for reproducible 
 
 [![build](https://github.com/Magnati/docker-pylint/workflows/build/badge.svg)](https://github.com/Magnati/docker-pylint/actions?query=workflow%3Abuild)
 
-| Docker Tag           | Git Ref      | pylint       | Available Architectures                      |
-|----------------------|--------------|--------------|----------------------------------------------|
-| `latest-<tag>`       | tag: `<tag>` | latest       | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
-| `2-<tag>`            | tag: `<tag>` | **`2.x.x`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+
+| Docker Tag      | Git Ref      | pylint       | python | Available Architectures                                          |
+|-----------------| -----------  |--------------|--------|------------------------------------------------------------------|
+| `2-py38-<tag>`  | tag: <tag>   | **`2.x.x`**  | `3.8`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `2-py39-<tag>`  | tag: <tag>   | **`2.x.x`**  | `3.9`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `2-py310-<tag>` | tag: <tag>   | **`2.x.x`**  | `3.10` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `2-py311-<tag>` | tag: <tag>   | **`2.x.x`**  | `3.11` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `2-py312-<tag>` | tag: <tag>   | **`2.x.x`**  | `3.12` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `3-py38-<tag>`  | tag: <tag>   | **`3.x.x`**  | `3.8`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` | 
+| `3-py39-<tag>`  | tag: <tag>   | **`3.x.x`**  | `3.9`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `3-py310-<tag>` | tag: <tag>   | **`3.x.x`**  | `3.10` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `3-py311-<tag>` | tag: <tag>   | **`3.x.x`**  | `3.11` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `3-py312-<tag>` | tag: <tag>   | **`3.x.x`**  | `3.12` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 
 > Where `<tag>` refers to the chosen git tag from this repository.
 
