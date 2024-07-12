@@ -51,8 +51,8 @@ The image is built weekly against multiple stable versions and pushed to Dockerh
 
 ## :whale: Available Docker image versions
 
-[![](https://img.shields.io/docker/pulls/Magnati/docker-pylint.svg)](https://hub.docker.com/r/Magnati/docker-pylint)
-[![Docker](https://badgen.net/badge/icon/:latest?icon=docker&label=Magnati/docker-pylint)](https://hub.docker.com/r/Magnati/docker-pylint)
+[![](https://img.shields.io/docker/pulls/magnati/pylint.svg)](https://hub.docker.com/r/magnati/pylint)
+[![Docker](https://badgen.net/badge/icon/:latest?icon=docker&label=Magnati/docker-pylint)](https://hub.docker.com/r/magnati/pylint)
 
 #### Rolling releaess
 
