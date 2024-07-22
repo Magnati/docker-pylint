@@ -55,7 +55,7 @@ The image is built weekly against multiple stable versions and pushed to Dockerh
 ## :whale: Available Docker image versions
 
 [![](https://img.shields.io/docker/pulls/magnati/pylint.svg)](https://hub.docker.com/r/magnati/pylint)
-[![Docker](https://badgen.net/badge/icon/:latest?icon=docker&label=Magnati/docker-pylint)](https://hub.docker.com/r/magnati/pylint)
+[![Docker](https://badgen.net/badge/icon/:latest?icon=docker&label=magnati/pylint)](https://hub.docker.com/r/magnati/pylint)
 
 #### Rolling releaess
 
@@ -70,7 +70,7 @@ The following Docker image tags are rolling releases and are built and updated e
 | `2-py310`   | master    | **`2.x.x`**  | `3.10` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 | `2-py311`   | master    | **`2.x.x`**  | `3.11` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 | `2-py312`   | master    | **`2.x.x`**  | `3.12` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
-| `3-py38`    | master    | **`3.x.x`**  | `3.8`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` | 
+| `3-py38`    | master    | **`3.x.x`**  | `3.8`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 | `3-py39`    | master    | **`3.x.x`**  | `3.9`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 | `3-py310`   | master    | **`3.x.x`**  | `3.10` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 | `3-py311`   | master    | **`3.x.x`**  | `3.11` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
@@ -90,7 +90,7 @@ The following Docker image tags are built once and can be used for reproducible 
 | `2-py310-<tag>` | tag: <tag>   | **`2.x.x`**  | `3.10` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 | `2-py311-<tag>` | tag: <tag>   | **`2.x.x`**  | `3.11` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 | `2-py312-<tag>` | tag: <tag>   | **`2.x.x`**  | `3.12` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
-| `3-py38-<tag>`  | tag: <tag>   | **`3.x.x`**  | `3.8`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` | 
+| `3-py38-<tag>`  | tag: <tag>   | **`3.x.x`**  | `3.8`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 | `3-py39-<tag>`  | tag: <tag>   | **`3.x.x`**  | `3.9`  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 | `3-py310-<tag>` | tag: <tag>   | **`3.x.x`**  | `3.10` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 | `3-py311-<tag>` | tag: <tag>   | **`3.x.x`**  | `3.11` | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
